@@ -1,65 +1,61 @@
-# Joe Cunnell — Personal Portfolio
+# Joe Cunnell — Portfolio
 
-Bold, gaming-inspired single-page portfolio (static HTML/CSS + light JS). No build step.
+Multi-page static portfolio (HTML/CSS + light JS). Night / dusk purple theme. No build step.
+
+Designed for GitHub Pages **user site** [`nightelm664.github.io`](https://nightelm664.github.io) — publish files at the **repo root**.
 
 ## Open locally
 
-1. Open the folder in a file browser, or from a terminal:
-   ```bash
-   cd joe-portfolio
-   open index.html        # macOS
-   # or: xdg-open index.html   # Linux
-   # or: start index.html      # Windows
-   ```
-2. Or serve it with any static server, e.g.:
-   ```bash
-   npx serve .
-   # or: python3 -m http.server 8080
-   ```
-   Then visit the URL shown (often `http://localhost:3000` or `:8080`).
+```bash
+cd joe-portfolio
+python3 -m http.server 8080
+# or: npx serve .
+```
 
-## Files
+Then open `http://localhost:8080` (or the URL shown). Or open `index.html` directly in a browser.
 
-| File         | Purpose                          |
-|--------------|----------------------------------|
-| `index.html` | Page structure & content         |
-| `styles.css` | Layout, theme, responsive styles |
-| `script.js`  | Mobile nav + footer year         |
-| `README.md`  | This file                        |
+## Site map
 
-## Colour palette
+| Path | Page |
+|------|------|
+| `index.html` | Home — hero, proof strip, featured work, brands, about teaser, mega CTA |
+| `work.html` | Full work grid |
+| `work/*.html` | Detailed case studies (8) |
+| `what-i-do.html` | Process & services |
+| `about.html` | Story, values, timeline |
+| `contact.html` | Email + socials |
+| `styles.css` | Shared dusk-purple theme |
+| `script.js` | Mobile nav + year |
+| `research/` | Work audit + Katie structure notes (not linked in nav) |
 
-- Background: `#07070c`
-- Surfaces: `#10101a` / `#161625`
-- Text: `#e8e8f0` / muted `#9a9ab0`
-- Neon cyan: `#00f0ff`
-- Magenta: `#ff2bd6`
-- Lime accent (badges): `#b8ff3c`
+### Case studies
 
-## Content status
+1. `work/echo-rwf.html` — Echo Race to World First (25M+ views from CV; AMD)
+2. `work/nightelm-wow-forever.html` — WoW Forever soundtrack meme (144K views)
+3. `work/venomous-abyss.html` — Venomous Abyss 8/8 wrap (111K)
+4. `work/twin-fangs.html` — World First Twin Fangs Mythic (108K)
+5. `work/nightelm-virality.html` — Personal virality / nostalgia strategy
+6. `work/corsair-partner.html` — Corsair Scimitar partner reel (30.5K)
+7. `work/moncada-visit.html` — Moncada RWF visit (39.7K)
+8. `work/giantx-era.html` — GIANTX era highlights (CV metrics)
 
-- **Identity / hero / experience / contact:** filled from Joe’s CV (Joe Cunnell · jcunnell@hotmail.co.uk)
-- **Case studies:** titles and blurbs match real campaigns; CV metrics labelled “(from CV)”. No invented Instagram/X post view counts. Social post examples to be added in a later pass.
-- **Photo / headshot:** none included yet; add an `<img>` in the hero if desired
-- **Social links:** optional — LinkedIn, X, Discord, etc. in the contact or footer section
+## Design
 
-## Deploy on GitHub Pages (free)
+- Backgrounds: `#0a0614`, `#12081f`, `#1a0f2e`
+- Accents: `#a855f7`, `#c084fc`, `#e879f9` (+ sparingly `#fb923c` / `#f472b6`)
+- Fonts: Fraunces (titles) + DM Sans (body) via Google Fonts
 
-1. Create a new GitHub repository (e.g. `joe-portfolio` or `username.github.io`).
-2. Push this folder’s contents to the repo (root or `/docs`).
-3. In the repo: **Settings → Pages → Build and deployment**.
-4. Source: **Deploy from a branch** → branch `main` (or `master`) → folder `/` (root) or `/docs`.
-5. Save. After a minute or two, the site is live at  
-   `https://<username>.github.io/<repo>/` (or `https://<username>.github.io/` for a user site).
+## Metrics policy
 
-## Deploy on Netlify (free)
+Campaign totals from the CV are labelled **(from CV)**. Per-post likes/views are public Instagram/X figures from the Oct 2026 work audit. Nothing invented.
 
-1. Go to [netlify.com](https://www.netlify.com/) and sign in (GitHub login works well).
-2. **Add new site → Import an existing project** and pick the repo, **or** drag-and-drop this folder onto Netlify Drop.
-3. Build settings: leave build command empty; publish directory = site root (`.`).
-4. Deploy. You’ll get a `*.netlify.app` URL; you can add a custom domain later.
+## Deploy (GitHub Pages user site)
 
-No Node/npm build is required for either host.
+1. Push this folder’s contents to the **root** of `nightelm664.github.io` (or the user-site repo).
+2. Settings → Pages → Deploy from branch `main` → folder `/` (root).
+3. Site live at `https://nightelm664.github.io/`.
+
+No Node/npm build required.
 
 ## Licence
 
